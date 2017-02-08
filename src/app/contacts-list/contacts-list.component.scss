@@ -1,0 +1,113 @@
+.contacts-wrapper {
+    width: 100%;
+    min-width: 300px;
+    max-width: 500px;
+
+    .contact-title {
+        text-align: center;
+        font-size: 25px;
+        padding: 5px 10px 10px 10px;
+        background: #fd6363;
+        color: white;
+        height: 50px;
+        box-shadow: 0px 3px 2px #e6e5e5;
+    }
+
+    .actions {
+        .action-item {
+            width: 35px;
+            float: right;
+
+             img {
+                width: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .search-box {
+        padding: 10px;
+
+        .search-input {
+            width: 100%;
+        }
+    }
+
+    .footer {
+        float: right;
+        margin: 0 0 10px 0;
+        border: 1px solid #CCC;
+        padding: 5px;
+        border-radius: 15px;
+    }
+
+
+    .collection-item {
+        .item {
+            display: inline-block;
+            width: 100%;
+
+            .image {
+                display: block;
+                width: 20%;
+                float: left;
+
+                .circle {
+                    border-radius: 25px;
+                    width: 50px;
+                }
+            }
+
+            .title {
+                display: block;
+                width: 70%;
+                margin-top: 1.5em;
+                float: left;
+                font-weight: bold;
+            }
+
+            .favorite {
+                display: block;
+                width: 10%;
+                height: 30px;
+                margin-top: 1.3em;
+                float: left;
+                background-image: url('../assets/images/contactFavoriteDisabled.png');
+                background-repeat: no-repeat;
+                background-size: 20px;
+                background-position: 0 0;
+
+                img {
+                    width: 20px;
+                }
+            }
+
+            .active{
+                background-image: url('../assets/images/contactFavoriteEnabled.png');
+            }
+        }
+    }
+
+
+    ul {
+        padding: 0;
+        height: 463px;
+        width: 100%;
+        overflow-y: auto;
+
+        li {
+            list-style-type: none;
+            padding: 10px;
+            cursor: pointer;
+            border-left: 2px solid #DDD;
+            border-bottom: 2px solid #DDD;
+        }
+
+        li:hover {
+            background: #ecf1f9;
+        }
+
+    }
+
+
+}

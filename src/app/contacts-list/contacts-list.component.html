@@ -1,0 +1,27 @@
+<div class="contacts-wrapper">
+    <div class="contact-title">Contacts</div>
+    <div class="actions">
+        <div class="action-item"><img src="assets/images/add_contact.png" alt="Add contact" [routerLink]="['/new']"></div>
+        <div class="action-item"><img src="assets/images/search.png" alt="Search contact" (click)="toggleFilters()"></div>
+    </div>
+    <div class="search-box" *ngIf="showfilters">
+        <input type="text" name="search" class="search-input" [(ngModel)]="textFilter">
+        <div>
+            <label class="control-label">
+                <input type="checkbox" name="favoritesFilter" value="true" [(ngModel)]="favoriteFilter"> See favorites
+            </label>
+        </div>
+    </div>
+    <ul class="collection">
+        <li class="collection-item" *ngFor="let contact of contacts | filterByText: textFilter | filterByFavorite: favoriteFilter; let i = index" [routerLink]="['/detail/', contact.id]">
+            <div class="item">
+                <div class="image"><img src="assets/images/people/{{contact.image}}" alt="" class="circle"></div>
+                <div class="title"><span>{{contact.name}} {{contact.surname}}</span></div>
+                <div class="favorite" [ngClass]="{'active': contact.favorite}" (click)="setFavorite(contact.id)"></div>
+            </div>
+        </li>
+    </ul>
+    <div class="footer">
+        Total contacts: {{contacts.length}}
+    </div>
+</div>

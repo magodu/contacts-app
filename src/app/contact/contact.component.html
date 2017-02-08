@@ -1,0 +1,31 @@
+<div class="detail-container">
+    <div class="contact-title">Contact detail</div>
+    <div class="detail-wrapper">
+        <div class="image">
+            <img src="assets/images/people/{{contactSelected.image || defaultImage}}" alt="">
+            <div class="name">{{contactSelected.name}} {{contactSelected.surname}}</div>
+        </div>
+        <div class="favorite-icon">
+            <img src="assets/images/contactFavoriteEnabled.png" alt="favorite contact" *ngIf="contactSelected.favorite">
+            <img src="assets/images/contactFavoriteDisabled.png" alt="favorite contact" *ngIf="!contactSelected.favorite">
+        </div>
+        <div class="data">
+            <dl>
+                <dt>Address</dt>
+                <dd>{{contactSelected.address || '-'}}</dd>
+                <dt>Zipcode</dt>
+                <dd>{{contactSelected.zipcode || '-'}}</dd>
+                <dt>City</dt>
+                <dd>{{contactSelected.city || '-'}}</dd>
+                <dt>Phone</dt>
+                <dd>{{(contactSelected.phone | usPhone) || '-'}}</dd>
+                <dt>Email</dt>
+                <dd>{{contactSelected.email || '-'}}</dd>
+            </dl>
+        </div>
+        <div class="actions">
+            <button type="button" class="button" (click)="onEdit()"> Edit</button>
+            <button type="button" class="button" [routerLink]="['/']"> Close</button>
+        </div>
+    </div>
+</div>

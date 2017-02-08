@@ -1,0 +1,90 @@
+[{
+        "id": 0,
+        "image": "cook.jpg",
+        "name": "Tim",
+        "surname": "Cook",
+        "address": "1 Apple Bvd",
+        "zipcode": "95014",
+        "city": "Cupertino",
+        "phone": "(555) 666 - 0987",
+        "email": "tcook@icloud.com",
+        "favorite": true
+    }, {
+        "id": 1,
+        "image": "zuckerberg.jpg",
+        "name": "Mark",
+        "surname": "Zuckerberg",
+        "address": "1 Twin Peaks Blvd",
+        "zipcode": "94131",
+        "city": "San Francisco",
+        "phone": "(555) 123 - 3456",
+        "email": "mzuckerberg@facebook.com",
+        "favorite": false
+    }, {
+        "id": 2,
+        "image": "musk.jpg",
+        "name": "Elon",
+        "surname": "Musk",
+        "address": "10833 Vicenza Way",
+        "zipcode": "90077",
+        "city": "Bel-Air",
+        "phone": "(555) 666 - 8347",
+        "email": "emusk@tesla.com",
+        "favorite": false
+    }, {
+        "id": 3,
+        "image": "allen.jpg",
+        "name": "Woody",
+        "surname": "Allen",
+        "address": "790 Grand St",
+        "zipcode": "11211",
+        "city": "New York",
+        "phone": "(555) 569 - 2453",
+        "email": "allenw@yahoo.com",
+        "favorite": true
+    }, {
+        "id": 4,
+        "image": "portman.jpg",
+        "name": "Natalie",
+        "surname": "Portman",
+        "address": "225 5th Ave",
+        "zipcode": "10010",
+        "city": "New York",
+        "phone": "(555) 388 - 9879",
+        "email": "portmann@gmail.com",
+        "favorite": false
+    }, {
+        "id": 5,
+        "image": "scarlett.jpg",
+        "name": "Scarlett",
+        "surname": "Johansson",
+        "address": "14 Rue de Trévise",
+        "zipcode": "75009",
+        "city": "Paris",
+        "phone": "(555) 321 - 4444",
+        "email": "scarlett_johansson@gmail.com",
+        "favorite": true
+    }, {
+        "id": 6,
+        "image": "ive.jpg",
+        "name": "Jony",
+        "surname": "Ive",
+        "address": "1 Twin Peaks Blvd",
+        "zipcode": "94135",
+        "city": "San Francisco",
+        "phone": "(555) 928 - 5649",
+        "email": "jive@icloud.com",
+        "favorite": false
+    }, {
+        "id": 7,
+        "image": "streep.jpg",
+        "name": "Meryl",
+        "surname": "Streep",
+        "address": "12 Brinkerhoff St",
+        "zipcode": "07304",
+        "city": "New Jersey",
+        "phone": "(555) 979 - 8465",
+        "email": "meryl.streep@gmail.com",
+        "favorite": false
+    }]
+

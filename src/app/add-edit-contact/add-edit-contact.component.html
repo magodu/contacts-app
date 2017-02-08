@@ -1,0 +1,74 @@
+<!-- model-driven forms version  -->
+<div class="edit-container">
+    <div class="contact-title">
+        <span *ngIf="mode == 'new'">Create Contact</span>
+        <span *ngIf="mode == 'edit'">Edit Contact</span>
+    </div>
+    <div class="edit-wrapper">
+        <form class="form-horizontal" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-data">
+                <div class="form-group col-sm-12">
+                    <label for="image" class="col-sm-4 control-label">Image</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="image" formControlName="image">
+                    </div>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label for="name" class="col-sm-4 control-label">Name<span>*</span></label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="name" formControlName="name" [ngClass]="{'error': contactForm.controls['name'].dirty && contactForm.controls['name'].invalid}">
+                    </div>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label for="surname" class="col-sm-4 control-label">Surname<span>*</span></label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="surname" formControlName="surname" [ngClass]="{'error': contactForm.controls['surname'].dirty && contactForm.controls['surname'].invalid}">
+                    </div>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label for="address" class="col-sm-4 control-label">Address</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="address" formControlName="address">
+                    </div>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label for="zipcode" class="col-sm-4 control-label">Zip code</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="zipcode" formControlName="zipcode">
+                    </div>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label for="city" class="col-sm-4 control-label">City</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="city" formControlName="city">
+                    </div>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label for="phone" class="col-sm-4 control-label">Phone</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="phone" formControlName="phone">
+                    </div>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label for="email" class="col-sm-4 control-label">Email</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="email" formControlName="email" [ngClass]="{'error': contactForm.controls['email'].invalid}">
+                    </div>
+                </div>
+                <div class="form-group col-sm-12">
+                    <div class="col-sm-offset-4 col-sm-8">
+                        <div class="checkbox">
+                            <label class="control-label">
+                                <input type="checkbox" id="favorite" value="true" formControlName="favorite"> Favorite
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <button type="button" class="button" (click)="onCancel()"> Cancel</button>
+                <button type="submit" class="button" [disabled]="!contactForm.valid"> Accept</button>
+            </div>
+        </form>
+    </div>
+</div>

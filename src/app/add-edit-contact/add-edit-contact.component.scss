@@ -1,0 +1,67 @@
+.edit-container {
+    width: 65%;
+    min-width: 300px;
+    max-width: 500px;
+
+    .contact-title {
+        text-align: center;
+        font-size: 25px;
+        padding: 5px 10px 10px 10px;
+        background: #fd6363;
+        color: white;
+        height: 50px;
+        box-shadow: 0px 3px 2px #e6e5e5;
+    }
+
+    .edit-wrapper {
+        width: 95%;
+        border: 1px solid #DDD;
+        margin: 0 auto;
+        position: relative;
+        box-shadow: 2px 2px 2px #e6e5e5;
+
+        .form-data {
+            margin: 30px 0 20px 0;
+
+            .control-label {
+                font-size: 12px;
+                text-transform: none;
+                color: black;
+
+                span {
+                    color: red;
+                }
+            }
+
+            .error {
+                border: 1px solid red;
+            }
+
+            .form-control:focus.error {
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(233, 102, 120, 0.6);
+            }
+        }
+
+        .actions {
+            padding: 10px;
+            text-align: right;
+        }
+    }
+}
+
+
+
+
+/*
+
+.form-group .control-label {
+    font-size: 12px;
+    text-transform: none;
+    color: black;
+}
+
+
+.form-group input.error {
+    border: 1px solid red;
+}
+*/

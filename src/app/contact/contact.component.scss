@@ -1,0 +1,76 @@
+.detail-container {
+    width: 65%;
+    min-width: 300px;
+    max-width: 500px;
+
+    .contact-title {
+        text-align: center;
+        font-size: 25px;
+        padding: 5px 10px 10px 10px;
+        background: #fd6363;
+        color: white;
+        height: 50px;
+        box-shadow: 0px 3px 2px #e6e5e5;
+    }
+
+    .detail-wrapper {
+        width: 95%;
+        border: 1px solid #DDD;
+        margin: 0 auto;
+        position: relative;
+        box-shadow: 2px 2px 2px #e6e5e5;
+
+        .image {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            .name {
+                position: absolute;
+                bottom: 15px;
+                left: 15px;
+                color: white;
+                font-weight: bold;
+                font-size: 25px;
+            }
+        }
+
+        .favorite-icon {
+            text-align: right;
+            margin: 5px 5px 0 0;
+
+            img {
+                width: 20px;
+            }
+        }
+
+        dl {
+            padding: 0.5em;
+        }
+
+        dt {
+            float: left;
+            clear: left;
+            text-align: right;
+            font-weight: bold;
+            color: green;
+        }
+
+        dt:after {
+            content: ":";
+        }
+
+        dd {
+            margin: 0 0 0 100px;
+            padding: 0 0 1em 0;
+            word-break: break-all;
+        }
+
+        .actions {
+            padding: 10px;
+            text-align: right;
+        }
+    }
+}

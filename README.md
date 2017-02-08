@@ -1,9 +1,15 @@
 # ContactsApp
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
+## To generate project with scss files by default
+
+Run `ng new contactsApp --style=scss`
+
+In an exist project run `ng set defaults.styleExt scss`
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --port PORTNUMBER` to start project in another port PORTNUMBER
 
 ## Code scaffolding
 
