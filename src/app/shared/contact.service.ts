@@ -1,4 +1,5 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import * as _ from 'lodash';
 import { Contact } from "../shared/contact";
 import { Http, Response } from "@angular/http";
@@ -8,7 +9,8 @@ import 'rxjs/Rx';
 @Injectable()
 export class ContactService {
 
-    pushedData = new EventEmitter<Contact[]>();
+    pushedDataEvent = new BehaviorSubject<Contact[]>([]);
+    pushedDataEv$ = this.pushedDataEvent.asObservable();
 
     private contacts: Contact[] = [];
     private endpoint: string = 'assets/data/contacts.json';
@@ -72,7 +74,7 @@ export class ContactService {
 
     /* This function communicates two sibling components*/
     pushData() {
-        this.pushedData.emit(this.contacts);
+        this.pushedDataEvent.next(this.contacts);
     }
 
 }

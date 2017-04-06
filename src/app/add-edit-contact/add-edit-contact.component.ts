@@ -48,11 +48,13 @@ export class AddEditContactComponent implements OnInit {
 
             // If we load or refresh a url like SERVER/edit/1 the component doesn't have the data in the beginning
             // The component have to wait until service load data and ContactsList component notify this fact.
-            this.contactService.pushedData.subscribe(
+
+            this.contactService.pushedDataEv$.subscribe(
                 (contacts: Contact[]) => {
                     this.contact = this.contactService.getContact(this.contactIndex);
                 }
             );
+
         } else {
             this.contact = new Contact(0, '', '', '', '', '', '', '', '', false);
         }

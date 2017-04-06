@@ -34,7 +34,8 @@ export class ContactsListComponent implements OnInit {
             () => console.log('loading data: done')     // Third argument is a function which runs on completion
         );
 
-        this.contactService.pushedData.subscribe(
+
+        this.contactService.pushedDataEv$.subscribe(
             (contacts: Contact[]) => {
                 this.contacts = contacts;
 

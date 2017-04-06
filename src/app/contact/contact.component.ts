@@ -26,14 +26,15 @@ export class ContactComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
+        
         // If we load or refresh a url like SERVER/detail/1 the component doesn't have the data in the beginning
         // The component have to wait until service load data and ContactsList component notify this fact.
-        this.contactService.pushedData.subscribe(
+
+        this.contactService.pushedDataEv$.subscribe(
             (contacts: Contact[]) => {
                 this.contactSelected = this.contactService.getContact(this.contactIndex);
             }
         );
-
     }
 
 
