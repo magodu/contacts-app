@@ -72,7 +72,7 @@
                 height: 30px;
                 margin-top: 1.3em;
                 float: left;
-                background-image: url('../assets/images/contactFavoriteDisabled.png');
+                background-image: url('../../assets/images/contactFavoriteDisabled.png');
                 background-repeat: no-repeat;
                 background-size: 20px;
                 background-position: 0 0;
@@ -83,7 +83,7 @@
             }
 
             .active{
-                background-image: url('../assets/images/contactFavoriteEnabled.png');
+                background-image: url('../../assets/images/contactFavoriteEnabled.png');
             }
         }
     }
